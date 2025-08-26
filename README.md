@@ -1,4 +1,5 @@
 # SIG_banjir_longsor_kecamatan_cikalong_kabupaten_Tasikmalaya
+Aliran dekat sungainya 250 meter
 ("DEM@1" < 50) + ("buffer_raster@1" = 1) + ("flow_accum@1" > 1000)
 
 Referensi :
