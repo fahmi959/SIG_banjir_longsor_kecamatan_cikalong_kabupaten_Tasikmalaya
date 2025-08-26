@@ -2,6 +2,13 @@
 Aliran dekat sungainya 250 meter
 ("DEM@1" < 50) + ("buffer_raster@1" = 1) + ("flow_accum@1" > 1000)
 
+
+hazard_raster = total_hasil_akhir 
+("hazard_raster@1" >= 0) * "hazard_raster@1"
+if(isfinite("hazard_raster@1"), "hazard_raster@1", 0)
+("hazard_raster@1" < 1e6) * "hazard_raster@1"
+
+
 Referensi :
 https://www.indonesia-geospasial.com/2020/01/shp-rbi-provinsi-jawa-barat-perwilayah.html
 https://tasikmalayakab.bps.go.id/id/statistics-table/3/YmtNd1RGQkhMelpTV213eFVEUjRZVk4wVmtadGR6MDkjMw==/jumlah-desa-kelurahan-yang-mengalami-bencana-alam-menurut-kecamatan-di-kabupaten-tasikmalaya--2018.html?year=2024
